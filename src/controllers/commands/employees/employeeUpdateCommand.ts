@@ -21,7 +21,7 @@ const buildUpdateObject = (employeeSaveRequest: EmployeeSaveRequest): Object => 
 		updateObject.firstName = employeeSaveRequest.firstName;
 	}
 	if (!Helper.isBlankString(employeeSaveRequest.password)) {
-		updateObject.password = Buffer.from(EmployeeHelper.hashString(employeeSaveRequest.password));
+		updateObject.password = Buffer.from(employeeSaveRequest.password);
 	}
 	if (employeeSaveRequest.classification != null) {
 		updateObject.classification = <EmployeeClassification>employeeSaveRequest.classification;

@@ -57,8 +57,7 @@ export const execute = async (
 		classification: (!isInitialEmployee
 			? <EmployeeClassification>employeeSaveRequest.classification
 			: EmployeeClassification.GeneralManager),
-		password: Buffer.from(
-			EmployeeHelper.hashString(employeeSaveRequest.password))
+		password: Buffer.from(employeeSaveRequest.password)
 	};
 
 	return EmployeeModel.create(employeeToCreate)

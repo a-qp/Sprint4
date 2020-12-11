@@ -88,7 +88,7 @@ export const execute = async (
 	return EmployeeRepository.queryByEmployeeId(Number(signInRequest.employeeId))
 		.then((queriedEmployee: (EmployeeModel | null)): Promise<CommandResponse<ActiveUserModel>> => {
 			if ((queriedEmployee == null) ||
-				(EmployeeHelper.hashString(signInRequest.password) !== queriedEmployee.password.toString())) {
+				(signInRequest.password !== queriedEmployee.password.toString())) {
 
 				return Promise.reject(<CommandResponse<ActiveUser>>{
 					status: 401,
