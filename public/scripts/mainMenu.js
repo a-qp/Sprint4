@@ -1,43 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-	getStartTransactionActionElement().addEventListener(
-		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+	getStartTransactionButton().addEventListener("click", () => displayError("Functionality has not yet been implemented."));
 
-	getViewProductsActionElement().addEventListener(
-		"click",
-		() => { window.location.assign("/productListing"); });
+	getViewProductsButton().addEventListener("click", () => window.location.assign("/productListing"));
 
-	getCreateEmployeeActionElement().addEventListener(
-		"click",
-		() => { window.location.assign("/employeeDetail"); });
+	getCreateEmployeeButton().addEventListener("click", () => window.location.assign("/employeeDetail"));
 
-	getProductSalesReportActionElement().addEventListener(
-		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+	getProductSalesReportButton().addEventListener("click", () => displayError("Functionality has not yet been implemented."));
 
-	getCashierSalesReportActionElement().addEventListener(
-		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+    getCashierSalesReportButton().addEventListener("click", () => displayError("Functionality has not yet been implemented."));    
 });
 
-// Getters and setters
-function getViewProductsActionElement() {
-	return document.getElementById("viewProductsButton");
-}
-
-function getCreateEmployeeActionElement() {
-	return document.getElementById("createEmployeeButton");
-}
-
-function getStartTransactionActionElement() {
+function getStartTransactionButton() 
+{
 	return document.getElementById("startTransactionButton");
 }
 
-function getProductSalesReportActionElement() {
+function getViewProductsButton() 
+{
+	return document.getElementById("viewProductsButton");
+}
+
+function getCreateEmployeeButton() 
+{
+	return document.getElementById("createEmployeeButton");
+}
+
+function getProductSalesReportButton() 
+{
 	return document.getElementById("productSalesReportButton");
 }
 
-function getCashierSalesReportActionElement() {
+function getCashierSalesReportButton() 
+{
 	return document.getElementById("cashierSalesReportButton");
 }
-// End getters and setters

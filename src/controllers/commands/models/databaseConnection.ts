@@ -1,7 +1,7 @@
 import Sequelize from "sequelize";
 
 const defaultMaximumPoolSize: number = 5;
-//Commit done by Omar, Baron, Terrence, and Bradley
+// Commit done by Omar, Baron, Terrence, and Bradley
 export const DatabaseConnection: Sequelize.Sequelize =
 	new Sequelize.Sequelize(
 		<string>process.env.DATABASE_URL,
